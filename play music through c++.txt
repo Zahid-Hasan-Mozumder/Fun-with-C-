@@ -1,0 +1,27 @@
+//Author : Zahid-Hasan-Mozumder
+
+
+1. First open codeblocks.
+2. Then,
+	go to setting -> compiler -> linker -> type "-lwinmm" in "other linker option" box -> press ok.
+	
+	(In Dev C++ you have to set linker everytime when you are creating a new project 
+	 but in codeblocks you just need to create linker only once).
+
+3. Now, create a new project of "console application"
+4. Convert your music file into .wav extension.
+5. Move the converted music file into the project folder.
+6. Paste the below code snippet in code file of the project,
+
+#include<iostream>
+#include<windows.h>
+#include<mmsystem.h>
+
+using namespace std;
+
+int main()
+{
+	PlaySound(TEXT("file name with extension"), NULL, SND_SYNC);
+	
+	return 0;
+}
